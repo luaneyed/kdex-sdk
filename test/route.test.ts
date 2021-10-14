@@ -1,12 +1,12 @@
-import { Token, WETH, ChainId, Pair, TokenAmount, Route, ETHER } from '../src'
+import { Token, WKLAY, ChainId, Pair, TokenAmount, Route, KLAY } from '../src'
 
 describe('Route', () => {
   const token0 = new Token(ChainId.MAINNET, '0x0000000000000000000000000000000000000001', 18, 't0')
   const token1 = new Token(ChainId.MAINNET, '0x0000000000000000000000000000000000000002', 18, 't1')
-  const weth = WETH[ChainId.MAINNET]
+  const wwklay = WKLAY[ChainId.MAINNET]
   const pair_0_1 = new Pair(new TokenAmount(token0, '100'), new TokenAmount(token1, '200'))
-  const pair_0_weth = new Pair(new TokenAmount(token0, '100'), new TokenAmount(weth, '100'))
-  const pair_1_weth = new Pair(new TokenAmount(token1, '175'), new TokenAmount(weth, '100'))
+  const pair_0_wklay = new Pair(new TokenAmount(token0, '100'), new TokenAmount(wwklay, '100'))
+  const pair_1_wklay = new Pair(new TokenAmount(token1, '175'), new TokenAmount(wwklay, '100'))
 
   it('constructs a path from the tokens', () => {
     const route = new Route([pair_0_1], token0)
@@ -18,23 +18,23 @@ describe('Route', () => {
   })
 
   it('can have a token as both input and output', () => {
-    const route = new Route([pair_0_weth, pair_0_1, pair_1_weth], weth)
-    expect(route.pairs).toEqual([pair_0_weth, pair_0_1, pair_1_weth])
-    expect(route.input).toEqual(weth)
-    expect(route.output).toEqual(weth)
+    const route = new Route([pair_0_wklay, pair_0_1, pair_1_wklay], wwklay)
+    expect(route.pairs).toEqual([pair_0_wklay, pair_0_1, pair_1_wklay])
+    expect(route.input).toEqual(wwklay)
+    expect(route.output).toEqual(wwklay)
   })
 
-  it('supports ether input', () => {
-    const route = new Route([pair_0_weth], ETHER)
-    expect(route.pairs).toEqual([pair_0_weth])
-    expect(route.input).toEqual(ETHER)
+  it('supports klay input', () => {
+    const route = new Route([pair_0_wklay], KLAY)
+    expect(route.pairs).toEqual([pair_0_wklay])
+    expect(route.input).toEqual(KLAY)
     expect(route.output).toEqual(token0)
   })
 
-  it('supports ether output', () => {
-    const route = new Route([pair_0_weth], token0, ETHER)
-    expect(route.pairs).toEqual([pair_0_weth])
+  it('supports klay output', () => {
+    const route = new Route([pair_0_wklay], token0, KLAY)
+    expect(route.pairs).toEqual([pair_0_wklay])
     expect(route.input).toEqual(token0)
-    expect(route.output).toEqual(ETHER)
+    expect(route.output).toEqual(KLAY)
   })
 })
