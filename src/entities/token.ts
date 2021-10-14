@@ -64,8 +64,8 @@ export const WKLAY = {
     'WKLAY',
     'Wrapped KLAY'
   ),
-  [ChainId.BSCTESTNET]: new Token(
-    ChainId.BSCTESTNET,
+  [ChainId.BAOBAB]: new Token(
+    ChainId.BAOBAB,
     '0x7D6a947ee257188298E34e0E9F619b5Dc4b24ba6',
     18,
     'WKLAY',
