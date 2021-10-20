@@ -57,8 +57,8 @@ export function currencyEquals(currencyA: Currency, currencyB: Currency): boolea
 }
 
 export const WKLAY = {
-  [ChainId.MAINNET]: new Token(
-    ChainId.MAINNET,
+  [ChainId.CYPRESS]: new Token(
+    ChainId.CYPRESS,
     '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
     18,
     'WKLAY',
