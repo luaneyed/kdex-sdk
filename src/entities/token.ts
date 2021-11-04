@@ -59,7 +59,7 @@ export function currencyEquals(currencyA: Currency, currencyB: Currency): boolea
 export const WKLAY = {
   [ChainId.CYPRESS]: new Token(
     ChainId.CYPRESS,
-    '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+    '0xecDC29C1A9C286C771686301554C219D4dDaA93e',
     18,
     'WKLAY',
     'Wrapped KLAY'
