@@ -21,7 +21,7 @@ export enum Rounding {
 
 export const FACTORY_ADDRESS = process.env.REACT_APP_CHAIN_ID === '1001' ? '0xA0acE51272FD35A9AFA42C2694Ee27A390831Ee9' : '0xBAE324Fb546240E6Cd5Dbf423d6b2c83b4d8CC58';
 
-export const INIT_CODE_HASH = process.env.REACT_APP_CHAIN_ID === '1001' ? '0xe26f1edeb3c91a91d1eabfa8c3a718cd73b3b1abe7d4228919cb302be3985e52' : '4f1fb03b3f72f7040dbf0917b1c344254cb0c4bb4a51c3247dba5503a7c311b3';
+export const INIT_CODE_HASH = process.env.REACT_APP_CHAIN_ID === '1001' ? '0xe26f1edeb3c91a91d1eabfa8c3a718cd73b3b1abe7d4228919cb302be3985e52' : '0x4f1fb03b3f72f7040dbf0917b1c344254cb0c4bb4a51c3247dba5503a7c311b3';
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
 
